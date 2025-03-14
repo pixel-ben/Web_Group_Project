@@ -1,0 +1,152 @@
+/*Style sheet for my section of the website*/
+/*created by: Luc McNichol*/
+
+/*-----GENERAL STYLES-----*/	
+/*Style for the body element*/
+body{	
+		background-image:url(luc_background.jpg);/*brick like background image*/
+		background-size:300px 300px;/*size set so the pattern can repeat*/
+}
+
+/*Style for all elements within the body*/
+body * {
+		border:3px solid black;/*thin black border*/
+		color:black;/*black text colour*/
+		background-color:lightgray;/*light grey background*/
+		font-size:20px;/*medium font size*/
+		padding:10px;/*padded in from the border*/
+		text-align:center;/*centre text alignment*/
+		font-family:"Times New Roman";/*easily read font*/
+		box-shadow:5px 5px 5px rgba(0,0,0,0.5);/*shadow to make it look 3D*/
+		vertical-align:top;/*aligned from the top*/
+}
+	
+/*Style for the main headings*/
+h1{		
+		font-family:papyrus;/*old timey font*/
+}
+
+/*Style for the sub headings*/
+h2{		
+		width:45%;/*takes up roughly half the page*/
+		height:5%;/*quite thin*/
+		float:left;/*positioned to the left*/
+}
+	
+/*Style for main story paragraphs and images*/
+p,img{		
+		width:45%;/*takes up roughly half the page*/
+		height:400px;/*takes up a large chunk of the page*/
+		float:left;/*positioned to the left*/
+		margin: 0;/*ensures no spacing between other elements*/
+}
+/*Style for just the images*/
+img{float:right;}/*resets the positioning to the right*/
+
+/*Style for the navigation options*/	
+nav{	
+		background:none;/*removes the background*/
+		border:none;/*removes the border*/
+		box-shadow:0px 0px 0px rgba(0,0,0,0);/*removes the shadow*/
+}
+	
+/*Style for the options*/
+a{		
+		color:red;/*red text colour*/
+		text-decoration:none;/*removes any blue/underline styling*/
+}
+	
+/*Style for when the user hovers over the options*/
+a:hover{
+		cursor:pointer;/*sets the cursor to a pointer*/
+		color:darkred;/*sets the text darker*/
+		background-color:darkgray/*sets the background darker*/
+}
+
+/*Style for the line breaks*/
+br{		
+		clear:both;/*clears both the left and right elements*/
+}
+
+/*-----CLASS STYLES-----*/	
+/*Style for the win page*/
+.win{	
+		color:yellow;/*yellow text colour*/
+}
+
+/*Style for the loss page*/
+.loss{	
+		color:red;/*red text colour*/
+}
+
+/*Style for the buttons (help/jukebox/languages)*/
+.button{
+		color:red;/*red text colour*/
+		height:40px;/*square icon*/
+		width:40px;/*square icon*/
+		border:0px;/*removes the border*/
+		padding:0px;/*removes the padding*/
+		float:left;/*positioned to the left*/
+		cursor:pointer;/*changes the cursor to a pounter*/
+		box-shadow:0px 0px 0px rgba(0,0,0,0);/*removes the shadow*/
+}
+	
+/*-----ID STYLES-----*/	
+/*Style for jukebox button*/
+#jukebox{
+		color:red;/*red text colour*/
+		height:40px;/*square icon*/
+		width:40px;/*square icon*/
+		border:0px;/*removes the border*/
+		padding:0px;/*removes the padding*/
+		float:right;/*positioned to the left*/
+		cursor:pointer;/*changes the cursor to a pounter*/
+		box-shadow:0px 0px 0px rgba(0,0,0,0);/*removes the shadow*/
+}	
+
+/*Style for fade animation*/
+#fade{	
+		width:100%;/*takes up the whole width*/
+		height:100%;/*takes up the whole height*/
+		background-color:black;/*full black background*/
+		z-index:999;/*ensures it is over all the other elements*/
+		top:0;/*starts from the very top*/
+		left:0;/*starts from the very left*/
+		position:fixed;/*fixed position*/
+		opacity:1;/*fully visible to begin win*/
+		transition:opacity 2s ease-in-out;/*sets up a transition from visible/invisible*/
+		pointer-events:none;/*ensures we can click through it*/
+		color:red;/*sets the text colour to red*/
+		font-size:100px;/*massive font size*/
+}
+		
+/*Style for the boss image*/
+#boss{	
+		width:97.5%;/*takes up almost the full page*/
+		float:left;/*positioned to the left*/
+}
+
+/*Style for boss story paragraph*/
+#bossp{	
+		width:97.5%;/*takes up almost the full width*/
+		height:10%;/*quite thin*/
+}
+/*Style for the rules heading and paragraphs*/
+#ruleshead, #rules{
+		float:right;/*positioned to the right*/
+}
+
+/*-----MULTI DEVICE STYLE-----*/
+/*configures the settings for mobile phone users*/
+@media (max-width:800px){
+	/*changes the body elements to fit the screen*/
+	body *{
+		width:97.5%;
+		font-size:15px;
+		float:left;
+		height:30%}
+	/*changes the options to fit the screen*/
+	a{
+		float:left;
+		width:95%}
+}

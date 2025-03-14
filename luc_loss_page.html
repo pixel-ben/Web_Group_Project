@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--Loss page - the page where the user will go to when they lose-->
+<!--created by: Luc McNichol-->
+<html>
+
+<head>
+
+	<!--The title of the page-->
+	<title>GAME OVER</title>
+	
+	<!--Links to the style sheet and script file-->
+	<link rel="stylesheet" href="luc_stylesheet.css">
+	<script src="luc_script.js" defer></script>
+	
+</head>
+
+<body>
+
+	<!--Adds the audio that will be used in this page-->
+	<audio id="transition">
+		<source src="luc_transition.mp3" type="audio/mp3">
+	</audio>
+	<audio id="background" loop>
+		<source src="luc_home.mp3" type="audio/mp3">
+	</audio>
+	
+	<!--Main heading-->
+	<h1 class="loss">
+		<!--Jukebox button-->
+		<a onclick="redirect('luc_help_page.html')" class="button"><img src="luc_help.png" class="button"></a>
+		
+		GAME OVER
+		
+		<!--Jukebox button-->
+		<img src="luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
+	</h1>
+	
+	<!--Main story paragraph-->
+	<p>
+		You charge with all your might at Gilgamesh.<br>
+		You are just too slow and he hits you with his club.<br>
+		Unfortunately you no longer have the strength to get back up.<br>
+		The dungeon doors lock for one last time and you spend the rest of time locked away.<br>
+		THE END
+	</p>
+	
+	<!--Main image-->
+	<img src="luc_loss.jpg">
+	
+	<!--Double line break to seperate the content-->
+	<br><br>
+	
+	<!--Restart button-->
+	<nav>
+		<a onclick="restart()">RESTART</a>
+	</nav>
+
+	<!--Black screen used for fade in/out-->
+	<div id="fade"></div>
+	
+</body>
+
+</html>

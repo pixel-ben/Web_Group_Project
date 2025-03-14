@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--Home page - the intial page the user will see-->
+<!--created by: Luc McNichol-->
+<html>
+
+<head>
+
+	<!--The title of the page-->
+	<title>Choose Your Own Adventure</title>
+
+	<!--Links to the style sheet and script file-->
+	<link rel="stylesheet" href="luc_stylesheet.css">
+	<script src="luc_script.js" defer></script>
+
+</head>
+
+<body>
+
+	<!--Adds the audio that will be used in this page-->
+	<audio id="transition">
+		<source src="luc_transition.mp3" type="audio/mp3">
+	</audio>
+	<audio id="background" loop>
+		<source src="luc_home.mp3" type="audio/mp3">
+	</audio>
+	
+	<!--Main heading-->
+	<h1>
+		<!--Help page button-->
+		<a onclick="redirect('luc_help_page.html')" class="button"><img src="luc_help.png" class="button"></a>
+		
+		Choose Your Own Adventure
+		
+		<!--Jukebox button-->
+		<img src="luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
+	</h1>
+
+	<!--Main story paragraph-->
+	<p>
+		You wake up in a cold dark dungeon with no recollection of the past...<br>
+		You look around the room at the cold stone walls, dimly lit by the torches attached to them. 
+		You notice a couple things that may help you escape:<br>
+		A)Infront of you stands a large wooden door with a rusted metal handle.<br>
+		B)Above your head, a wooden trapdoor you may be able to open.<br>
+		C)In the corner of the room, there seems to be a small hole in the wall.<br>
+		D)There seems to be a slight glow coming from under your bed.<br>
+		What do you wish to do?
+	</p>
+
+	<!--Main image-->
+	<img src="luc_home.jpg">
+		
+	<!--Double line break to seperate the content-->	
+	<br><br>
+
+	<!--4 story option buttons-->
+	<nav>
+		<a onclick="redirect('luc_boss_fight.html')">A) Open the wooden door</a>
+		<a onclick="redirect('luc_boss_fight.html')">B) Reach the trapdoor</a>
+		<a onclick="redirect('luc_boss_fight.html')">C) Crawl through the hole</a>
+		<a onclick="redirect('luc_boss_fight.html')">D) Check under the bed</a>
+	</nav>
+	
+	<!--Black screen used for fade in/out-->
+	<div id="fade"></div>
+	
+</body>
+
+</html>

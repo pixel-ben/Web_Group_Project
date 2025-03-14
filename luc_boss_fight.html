@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--Boss fight - the page where the user will fight the boss-->
+<!--created by: Luc McNichol-->
+<html>
+
+<head>
+
+	<!--The title of the page-->
+	<title>BOSS FIGHT</title>
+
+	<!--Links to the style sheet and script file-->
+	<link rel="stylesheet" href="luc_stylesheet.css">
+	<script src="luc_script.js" defer></script>
+
+</head>
+
+<body>
+
+	<!--Adds the audio that will be used in this page-->
+	<audio id="transition">
+		<source src="luc_transition.mp3" type="audio/mp3">
+	</audio>
+	<audio id="background" loop>
+		<source src="luc_home.mp3" type="audio/mp3">
+	</audio>
+	<audio id="sword">
+		<source src="luc_sword.mp3" type="audio/mp3">
+	</audio>
+	
+	<!--Main heading-->
+	<h1>
+		<!--Jukebox button-->
+		<a onclick="redirect('luc_help_page.html')" class="button"><img src="luc_help.png" class="button"></a>
+		
+		BOSS FIGHT
+		
+		<!--Jukebox button-->
+		<img src="luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
+	</h1>
+	
+	<!--Main image-->
+	<img src="luc_boss.jpg" id="boss">
+
+		
+	<!--Double line break to seperate the content-->
+	<br><br>
+	
+	<!--Main story paragraph-->
+	<p id="bossp">
+		You reach the end of the dungeon and Gilgamesh the Goblin appears!<br>
+		He is alerted by you charges at you with his spiked club!<br>
+		What do you do?
+	</p>
+
+	<!--Double line break to seperate the content-->
+	<br><br>
+
+	<!--2 story option buttons-->
+	<nav>
+		<a onclick="winlose()" onmouseover="attack()">ATTACK HIM!</a>
+		<a onclick="redirect('luc_home_page.html')">RUN AWAY!</a>
+	</nav>
+	
+	<!--Black screen used for fade in/out-->
+	<div id="fade"></div>
+
+</body>
+
+</html>

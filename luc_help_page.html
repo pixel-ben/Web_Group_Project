@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--Help page - provides help and rules for the user-->
+<!--created by: Luc McNichol-->
+<html>
+
+<head>
+
+	<!--The title of the page-->
+	<title>HELP AND RULES</title>
+
+	<!--Links to the style sheet and script file-->
+	<link rel="stylesheet" href="luc_stylesheet.css">
+	<script src="luc_script.js" defer></script>
+	
+	<!--Sets the encoding to allow for non english characters to be added-->
+	<meta charset="UTF-8">
+
+</head>
+
+<body>
+
+	<!--Adds the audio that will be used in this page-->
+	<audio id="transition">
+		<source src="luc_transition.mp3" type="audio/mp3">
+	</audio>
+	<audio id="background" loop>
+		<source src="luc_home.mp3" type="audio/mp3">
+	</audio>
+	
+	<!--Main heading-->
+	<h1>
+		<!--Back button-->
+		<a onclick="redirect('javascript:window.history.back()')" class="button"><img src="luc_back.png" class="button"></a>
+		
+		<!--4 Language buttons-->
+		<img src="luc_uk.png" class="button" onclick="uk()">
+		<img src="luc_spain.png" class="button" onclick="spanish()">
+		<img src="luc_france.png" class="button" onclick="french()">
+		<img src="luc_china.png" class="button" onclick="chinese()">
+
+		HELP PAGE
+
+		<!--Jukebox button-->
+		<img src="luc_mute.png" id="jukebox" onclick="play()"></a>
+	</h1>
+	
+	<!--Headings for both help and rules-->
+	<h2 id="helphead"></h2>
+	<h2 id="ruleshead"></h2>
+	
+	<!--Double line break to seperate the content-->	
+	<br><br>
+	
+	<!--Content for both help and rules-->
+	<p id="help"></p>
+	<p id="rules"></p>
+	
+	<!--Black screen used for fade in/out-->
+	<div id="fade"></div>
+	
+</body>
+
+</html>
