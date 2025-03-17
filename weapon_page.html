@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Weapon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+        .weapon-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .weapon {
+            padding: 15px;
+            border: 2px solid white;
+            cursor: pointer;
+            background-color: #444;
+            transition: 0.3s;
+        }
+        .weapon:hover {
+            background-color: #666;
+        }
+        .selected {
+            border-color: yellow;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Choose Your Weapon</h1>
+    <p>Select a weapon for your adventure:</p>
+
+    <div class="weapon-container">
+		<div class="weapon" onclick="selectWeapon('Stick')"> Stick</div>
+        <div class="weapon" onclick="selectWeapon('Sword')">🗡️ Sword</div>
+        <div class="weapon" onclick="selectWeapon('Bow')">🏹 Bow</div>
+        <div class="weapon" onclick="selectWeapon('Staff')">🪄 Staff</div>
+    </div>
+
+    <p id="chosen-weapon">No weapon selected</p>
+    <button onclick="confirmChoice()">Confirm Selection</button>
+
+    <script>
+        let selectedWeapon = "";
+
+        function selectWeapon(weapon) {
+            selectedWeapon = weapon;
+            document.getElementById("chosen-weapon").innerText = `Selected Weapon: ${weapon}`;
+
+
+            document.querySelectorAll('.weapon').forEach(w => w.classList.remove('selected'));
+
+            event.target.classList.add('selected');
+        }
+
+        function confirmChoice() {
+            if (selectedWeapon) {
+                localStorage.setItem("chosenWeapon", selectedWeapon);
+                alert(`You chose ${selectedWeapon}! Moving to the next step.`);
+                window.location.href = "next_page.html";
+            } else {
+                alert("Please select a weapon before continuing!");
+            }
+        }
+    </script>
+
+</body>
+</html>
