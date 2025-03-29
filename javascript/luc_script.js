@@ -31,10 +31,10 @@ function redirect(x){
 function play(){
 	if(background.paused){/*does the following if the music is paused*/
 		background.play();/*plays the music*/
-		jukebox.src="/images/homePage/luc_music.png";/*changes the icon to played*/
+		jukebox.src="../images/homePage/luc_music.png";/*changes the icon to played*/
 	}else{/*does the following if the music is played*/
 		background.pause();/*pauses the music*/
-		jukebox.src="/images/homePage/luc_mute.png";}/*changes the icon to paused*/
+		jukebox.src="../images/homePage/luc_mute.png";}/*changes the icon to paused*/
 }
 	
 /*-----GAMEPLAY FUNCTIONS-----*/
@@ -42,12 +42,12 @@ function play(){
 function winlose(){
 	sword.play()/*plays the sword sound, letting the user know a fight has been engaged*/
 	var random=Math.floor(Math.random()*2);/*calculates the score of the user*/
-	boss.src="/images/homePage/luc_fight.gif";/*plays the boss fight gif*/
+	boss.src="../images/homePage/luc_fight.gif";/*plays the boss fight gif*/
 	setTimeout(function() {/*delays the redirect to allow the fade audio and animation play*/
 		if (random===0) {/*does the following if the user wins*/
-			redirect('/pages/luc_win_page.html');/*redirects to the win page*/
+			redirect('../pages/luc_win_page.html');/*redirects to the win page*/
 		} else {/*does the following if the user loses*/
-			redirect('/pages/luc_loss_page.html');/*redirects to the win page*/
+			redirect('../pages/luc_loss_page.html');/*redirects to the win page*/
     }
 	}, 3000);
 }
@@ -56,11 +56,11 @@ function winlose(){
 function restart(){
 	fadein();/*calls the fade in function*/
 	fade.innerText="RESTARTING..."/*lets the user know the game is restarting*/
-	fade.style.backgroundImage="url('/images/homePage/luc_loading.gif')";/*plays a loading gif*/
+	fade.style.backgroundImage="url('../images/homePage/luc_loading.gif')";/*plays a loading gif*/
 	fade.style.backgroundSize="cover";/*covers the full screen with the gif*/
 	background.play()/*plays the loading music*/
 	setTimeout(function(){/*delays the redirect to allow the fade audio and animation play*/
-		window.location.href="/pages/luc_home_page.html"/*redirects to the home page*/
+		window.location.href="../pages/luc_home_page.html"/*redirects to the home page*/
 	},8000);
 }
 	
