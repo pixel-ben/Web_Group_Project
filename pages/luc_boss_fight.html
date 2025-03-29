@@ -9,8 +9,8 @@
 	<title>BOSS FIGHT</title>
 
 	<!--Links to the style sheet and script file-->
-	<link rel="stylesheet" href="/css/luc_stylesheet.css">
-	<script src="/javascript/luc_script.js" defer></script>
+	<link rel="stylesheet" href="../css/luc_stylesheet.css">
+	<script src="../javascript/luc_script.js" defer></script>
 
 </head>
 
@@ -18,28 +18,28 @@
 
 	<!--Adds the audio that will be used in this page-->
 	<audio id="transition">
-		<source src="/audio/luc_transition.mp3" type="audio/mp3">
+		<source src="../audio/luc_transition.mp3" type="audio/mp3">
 	</audio>
 	<audio id="background" loop>
-		<source src="/audio/luc_home.mp3" type="audio/mp3">
+		<source src="../audio/luc_home.mp3" type="audio/mp3">
 	</audio>
 	<audio id="sword">
-		<source src="/audio/luc_sword.mp3" type="audio/mp3">
+		<source src="../audio/luc_sword.mp3" type="audio/mp3">
 	</audio>
 	
 	<!--Main heading-->
 	<h1>
 		<!--Jukebox button-->
-		<a onclick="redirect('/pages/luc_help_page.html')" class="button"><img src="/images/bossFight/luc_help.png" class="button"></a>
+		<a onclick="redirect('../pages/luc_help_page.html')" class="button"><img src="../images/bossFight/luc_help.png" class="button"></a>
 		
 		BOSS FIGHT
 		
 		<!--Jukebox button-->
-		<img src="/images/bossFight/luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
+		<img src="../images/bossFight/luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
 	</h1>
 	
 	<!--Main image-->
-	<img src="/images/bossFight/luc_boss.jpg" id="boss">
+	<img src="../images/bossFight/luc_boss.jpg" id="boss">
 
 		
 	<!--Double line break to seperate the content-->
@@ -58,7 +58,7 @@
 	<!--2 story option buttons-->
 	<nav>
 		<a onclick="winlose()" onmouseover="attack()">ATTACK HIM!</a>
-		<a onclick="redirect('/pages/luc_home_page.html')">RUN AWAY!</a>
+		<a onclick="redirect('../pages/luc_home_page.html')">RUN AWAY!</a>
 	</nav>
 	
 	<!--Black screen used for fade in/out-->
