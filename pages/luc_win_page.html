@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--Win page - the page where the user will go to when they win-->
+<!--created by: Luc McNichol-->
+<html>
+
+<head>
+
+	<!--The title of the page-->
+	<title>YOU WIN</title>
+
+	<!--Links to the style sheet and script file-->
+	<link rel="stylesheet" href="/css/luc_stylesheet.css">
+	<script src="/javascript/luc_script.js" defer></script>
+
+</head>
+
+<body>
+
+	<!--Adds the audio that will be used in this page-->
+	<audio id="transition">
+		<source src="/audio/luc_transition.mp3" type="audio/mp3">
+	</audio>
+	<audio id="background" loop>
+		<source src="/audio/luc_home.mp3" type="audio/mp3">
+	</audio>
+	
+	<!--Main heading-->
+	<h1 class="win">
+		<!--Jukebox button-->
+		<a onclick="redirect('/pages/luc_help_page.html')" class="button"><img src="/images/helpPage/luc_help.png" class="button"></a>
+		
+		YOU WIN
+		
+		<!--Jukebox button-->
+		<img src="/images/winPage/luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
+	</h1>
+	
+	<!--Main story paragraph-->
+	<p>
+		Gilgamesh attempts to strike you but you quickly duck under his swing.<br>
+		You strike him with the sword you found earlier.<br>
+		He drops to the floor and withers into dust.<br>
+		You open the dungeon doors and are greeted with a mountain of treasure.<br>
+		You fill your pockets and run towards the light.<br>
+		Freedom at last.<br>
+		THE END<br>
+	</p>
+	
+	<!--Main image-->
+	<img src="/images/winPage/luc_win.jpg">
+	
+	<!--Double line break to seperate the content-->
+	<br><br>
+	
+	<!--Restart button-->	
+	<nav>
+		<a onclick="restart()">RESTART</a>
+	</nav>
+
+	<!--Black screen used for fade in/out-->
+	<div id="fade"></div>
+	
+</body>
+
+</html>
