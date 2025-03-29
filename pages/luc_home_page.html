@@ -9,8 +9,8 @@
 	<title>Choose Your Own Adventure</title>
 
 	<!--Links to the style sheet and script file-->
-	<link rel="stylesheet" href="/css/luc_stylesheet.css">
-	<script src="/javascript/luc_script.js" defer></script>
+	<link rel="stylesheet" href="../css/luc_stylesheet.css">
+	<script src="../javascript/luc_script.js" defer></script>
 
 </head>
 
@@ -18,21 +18,21 @@
 
 	<!--Adds the audio that will be used in this page-->
 	<audio id="transition">
-		<source src="/audio/luc_transition.mp3" type="audio/mp3">
+		<source src="../audio/luc_transition.mp3" type="audio/mp3">
 	</audio>
 	<audio id="background" loop>
-		<source src="/audio/luc_home.mp3" type="audio/mp3">
+		<source src="../audio/luc_home.mp3" type="audio/mp3">
 	</audio>
 	
 	<!--Main heading-->
 	<h1>
 		<!--Help page button-->
-		<a onclick="redirect('/pages/luc_help_page.html')" class="button"><img src="/images/homePage/luc_help.png" class="button"></a>
+		<a onclick="redirect('../pages/luc_help_page.html')" class="button"><img src="../images/homePage/luc_help.png" class="button"></a>
 		
 		Choose Your Own Adventure
 		
 		<!--Jukebox button-->
-		<img src="/images/homePage/luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
+		<img src="../images/homePage/luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
 	</h1>
 
 	<!--Main story paragraph-->
@@ -48,17 +48,17 @@
 	</p>
 
 	<!--Main image-->
-	<img src="/images/homePage/luc_home.jpg">
+	<img src="../images/homePage/luc_home.jpg">
 		
 	<!--Double line break to seperate the content-->	
 	<br><br>
 
 	<!--4 story option buttons-->
 	<nav>
-		<a onclick="redirect('/pages/luc_boss_fight.html')">A) Open the wooden door</a>
-		<a onclick="redirect('/pages/luc_boss_fight.html')">B) Reach the trapdoor</a>
-		<a onclick="redirect('/pages/luc_boss_fight.html')">C) Crawl through the hole</a>
-		<a onclick="redirect('/pages/luc_boss_fight.html')">D) Check under the bed</a>
+		<a onclick="redirect('../pages/luc_boss_fight.html')">A) Open the wooden door</a>
+		<a onclick="redirect('../pages/luc_boss_fight.html')">B) Reach the trapdoor</a>
+		<a onclick="redirect('../pages/luc_boss_fight.html')">C) Crawl through the hole</a>
+		<a onclick="redirect('../pages/luc_boss_fight.html')">D) Check under the bed</a>
 	</nav>
 	
 	<!--Black screen used for fade in/out-->
