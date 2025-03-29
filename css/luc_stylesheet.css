@@ -4,7 +4,7 @@
 /*-----GENERAL STYLES-----*/	
 /*Style for the body element*/
 body{	
-		background-image:url(/images/homePage/luc_background.jpg);/*brick like background image*/
+		background-image:url(../images/homePage/luc_background.jpg);/*brick like background image*/
 		background-size:300px 300px;/*size set so the pattern can repeat*/
 }
 
