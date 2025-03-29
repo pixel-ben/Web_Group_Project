@@ -8,7 +8,7 @@
 /* Background setup */
 body {
     font-family: 'Georgia', serif;
-    background: url('../images/indexPage/background.jpg') no-repeat center center fixed;
+    background-image:url(../images/indexPage/background.jpg);
     background-size: cover;
     color: #f4f4f4;
     text-align: center;
