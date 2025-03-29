@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Weapon</title>
+ 
+    <link rel="stylesheet" href="/css/weaponPage.css">
+    <script src="/javascript/weaponPage.js" defer></script>
+
+</head>
+<body>
+
+    <h1>Choose Your Weapon</h1>
+    <p>Select a weapon for your adventure:</p>
+
+    <div class="weapon-container">
+        <div class="weapon" id="sword" onclick="selectWeapon('Sword')">
+            <img src="/images/weaponPage/sword.png" alt="Sword">  
+            <p>Sword</p>
+        </div>
+        <div class="weapon" id="dagger" onclick="selectWeapon('dagger')">
+            <img src="/images/weaponPage/dagger.png" alt="dagger">
+            <p>Dagger</p>
+        </div>
+        <div class="weapon" id="axe" onclick="selectWeapon('axe')">
+            <img src="/images/weaponPage/axe.png" alt="axe">
+            <p>Axe</p>
+        </div>
+		<div class="weapon" id="club" onclick="selectWeapon('club')">
+            <img src="/images/weaponPage/club.png" alt="club">
+            <p>Basic Club</p>
+        </div>
+    </div>
+
+    <p id="chosen-weapon">No weapon selected</p>
+    <button onclick="confirmChoice()">Confirm Selection</button>
+
+    
+
+</body>
+</html>

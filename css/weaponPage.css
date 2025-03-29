@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+.weapon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.weapon {
+    padding: 15px;
+    border: 2px solid white;
+    cursor: pointer;
+    background-color: #444;
+    transition: 0.3s;
+    text-align: center;
+    width: 150px;
+}
+.weapon:hover {
+    background-color: #666;
+}
+.selected {
+    border-color: yellow;
+}
+img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
