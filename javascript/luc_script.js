@@ -10,7 +10,7 @@ window.onload=	fadeout(),/*fades the page out from black*/
 function fadeout(){
 	setTimeout(function(){/*short delay as page was loading and the animation wasnt playing*/
 	fade.style.opacity=0;/*sets the fade element to be invisible*/
-	},50);
+	},100);
 }
 	
 /*function that fades the page in to black*/
