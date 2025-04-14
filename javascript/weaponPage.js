@@ -17,7 +17,7 @@ function confirmChoice() {
     if (selectedWeapon) {
         localStorage.setItem("chosenWeapon", selectedWeapon); // Save weapon in localStorage
         alert(`You chose ${selectedWeapon}! Moving to the next step.`);
-        window.location.href = "next_page.html"; // Redirect to next page
+        window.location.href = "luc_boss__page.html"; // Redirect to next page
     } else {
         alert("Please select a weapon before continuing!");
     }
