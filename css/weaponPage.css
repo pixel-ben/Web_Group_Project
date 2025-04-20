@@ -1,4 +1,4 @@
-//Main part that makes the background the background.jpg image
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -26,7 +26,7 @@ body {
     background-color: #666;
 }
 
-//makes the selected weapon glow and frow and shrink
+
 .selected {
 	border-color: yellow;
 	animation: pulse 1s infinite alternate;
