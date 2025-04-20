@@ -23,6 +23,12 @@ function confirmChoice() {
     }
 }
 
+function pickRandomWeapon() {
+	const weapons = ["Sword", "Dagger", "Axe", "Club"];
+	const randomWeapon = weapons[Math.floor(Math.random() * weapons.length)];
+	selectWeapon(randomWeapon);
+}
+
 // Load saved weapon if user comes back to this page
 window.onload = function() {
     let savedWeapon = localStorage.getItem("chosenWeapon");
