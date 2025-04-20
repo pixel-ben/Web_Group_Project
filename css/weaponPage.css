@@ -1,3 +1,4 @@
+//Main part that makes the background the background.jpg image
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -5,6 +6,7 @@ body {
     background-size: cover;
     color: white;
 }
+
 .weapon-container {
     display: flex;
     justify-content: center;
@@ -23,14 +25,30 @@ body {
 .weapon:hover {
     background-color: #666;
 }
+
+//makes the selected weapon glow and frow and shrink
 .selected {
-    border-color: yellow;
+	border-color: yellow;
+	animation: pulse 1s infinite alternate;
 }
+
+@keyframes pulse {
+	from {
+		transform: scale(1);
+		box-shadow: 0 0 5px yellow;
+	}
+	to {
+		transform: scale(1.05);
+		box-shadow: 0 0 15px yellow;
+	}
+}
+
 img {
     width: 100px;
     height: auto;
     margin-bottom: 10px;
 }
+
 button {
     margin-top: 20px;
     padding: 10px 20px;
