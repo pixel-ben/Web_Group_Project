@@ -44,7 +44,7 @@
     <script>
         // Function to open the popup
         function selectCharacter(characterId) {
-            // Pop-up content based on character selection
+            
             let characterData = {
                 human: {
                     img: '../images/pickCharacterPageImages/human.png',
@@ -67,20 +67,22 @@
             
             // Show the pop-up
             document.getElementById('popup').style.display = 'flex';
-            document.body.style.overflow = 'hidden';  // Disable scroll when the pop-up is open
+            document.body.style.overflow = 'hidden';  
         }
 
         // Function to go back and close the pop-up
         function goBack() {
             document.getElementById('popup').style.display = 'none';
-            document.body.style.overflow = 'auto';  // Enable scroll again
-        }
+            document.body.style.overflow = 'auto'; 
 
         // Function to select character
         function selectCharacterConfirm() {
             alert('Character selected!');
             window.location.href = 'luc_home_page.html';
         }
+    }
     </script>
 </body>
 </html>
+        
+    
