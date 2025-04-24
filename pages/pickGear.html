@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear selection</title>
+    <link rel="stylesheet" href="../css/pickCharacter.css">
+</head>
+<body>
+    <h1>Select your gear</h1>
+    
+    <!-- Container for the character images -->
+    <div class="character-container">
+        <img src="../images/pickGearPageImages/armour.png" alt="Armour" class="character-image" id="Armour" onclick="selectGear('Armour')">
+        <img src="../images/pickGearPageImages/helmet.png" alt="helmet" class="character-image" id="Helmemt" onclick="selectGear('Helmet')">
+        <img src="../images/pickGearPageImages/shield.png" alt="Shield" class="character-image" id="Shield" onclick="selectGear('Shield')">
+        
+    </div>
+
+    <!-- Pop-up for character selection -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2 id="popup-title">Character Details</h2>
+            <div class="popup-body">
+                <div class="popup-image">
+                    <img src="" alt="Selected Character" id="popup-img">
+                </div>
+                <div class="popup-text">
+                    <p id="popup-description">Description of the character goes here.</p>
+                </div>
+            </div>
+            <div class="popup-buttons">
+                <button onclick="goBack()">Go Back</button>
+                <button onclick="selectGearConfirm()">Select Gear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- "Choose wisely" text at the bottom of the page -->
+    <div class="choose-wisely-container">
+        <p class="choose-wisely-text">Choose wisely, adventurer...</p>
+    </div>
+
+    <script>
+        // Function to open the popup
+        function selectGear(gearId) {
+            // Pop-up content based on character selection
+            let gearData = {
+                Armour: {
+                    img: '../images/pickGearPageImages/armour.png',
+                    description: 'Will protect from attacks to the body.'
+                },
+                Helmet: {
+                    img: '../images/pickGearPageImages/helmet.png',
+                    description: 'Will protect from attacks to the head.'
+                },
+                Shield: {
+                    img: '../images/pickGearPageImages/shield.png',
+                    description: 'Will protect from overall attacks, but heavy and takes up space.'
+                }
+            };
+
+            // Update the popup content
+            document.getElementById('popup-img').src = gearData[gearId].img;
+            document.getElementById('popup-description').textContent = gearData[gearId].description;
+            document.getElementById('popup-title').textContent = gearId.charAt(0).toUpperCase() + gearId.slice(1);
+            
+            // Show the pop-up
+            document.getElementById('popup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';  // Disable scroll when the pop-up is open
+        }
+
+        // Function to go back and close the pop-up
+        function goBack() {
+            document.getElementById('popup').style.display = 'none';
+            document.body.style.overflow = 'auto';  // Enable scroll again
+        }
+
+        // Function to select character
+        function selectGearConfirm() {
+            alert('Gear Selected!');
+            window.location.href = 'finalDoor.html';
+        }
+    </script>
+</body>
+</html>
+

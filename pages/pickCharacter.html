@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Selection</title>
+    <link rel="stylesheet" href="../css/pickCharacter.css">
+</head>
+<body>
+    <h1>Select Your Character</h1>
+    
+    <!-- Container for the character images -->
+    <div class="character-container">
+        <img src="../images/pickCharacterPageImages/human.png" alt="human" class="character-image" id="human" onclick="selectCharacter('human')">
+        <img src="../images/pickCharacterPageImages/troll.png" alt="troll" class="character-image" id="troll" onclick="selectCharacter('troll')">
+        <img src="../images/pickCharacterPageImages/elf.png" alt="elf" class="character-image" id="elf" onclick="selectCharacter('elf')">
+        
+    </div>
+
+    <!-- Pop-up for character selection -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2 id="popup-title">Character Details</h2>
+            <div class="popup-body">
+                <div class="popup-image">
+                    <img src="" alt="Selected Character" id="popup-img">
+                </div>
+                <div class="popup-text">
+                    <p id="popup-description">Description of the character goes here.</p>
+                </div>
+            </div>
+            <div class="popup-buttons">
+                <button onclick="goBack()">Go Back</button>
+                <button onclick="selectCharacterConfirm()">Select Character</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- "Choose wisely" text at the bottom of the page -->
+    <div class="choose-wisely-container">
+        <p class="choose-wisely-text">Choose wisely, adventurer...</p>
+    </div>
+
+    <script>
+        // Function to open the popup
+        function selectCharacter(characterId) {
+            // Pop-up content based on character selection
+            let characterData = {
+                human: {
+                    img: '../images/pickCharacterPageImages/human.png',
+                    description: 'The human character is versatile and balanced.'
+                },
+                troll: {
+                    img: '../images/pickCharacterPageImages/troll.png',
+                    description: 'Trolls are powerful but slow-moving warriors.'
+                },
+                elf: {
+                    img: '../images/pickCharacterPageImages/elf.png',
+                    description: 'Elves are swift, agile, and skilled with magic.'
+                }
+            };
+
+            // Update the popup content
+            document.getElementById('popup-img').src = characterData[characterId].img;
+            document.getElementById('popup-description').textContent = characterData[characterId].description;
+            document.getElementById('popup-title').textContent = characterId.charAt(0).toUpperCase() + characterId.slice(1);
+            
+            // Show the pop-up
+            document.getElementById('popup').style.display = 'flex';
+            document.body.style.overflow = 'hidden';  // Disable scroll when the pop-up is open
+        }
+
+        // Function to go back and close the pop-up
+        function goBack() {
+            document.getElementById('popup').style.display = 'none';
+            document.body.style.overflow = 'auto';  // Enable scroll again
+        }
+
+        // Function to select character
+        function selectCharacterConfirm() {
+            alert('Character selected!');
+            window.location.href = 'luc_home_page.html';
+        }
+    </script>
+</body>
+</html>
