@@ -1,8 +1,8 @@
-/* Base body styling */
+
 body {
-    font-family: 'MedievalSharp', cursive; /* Gothic, medieval-style font */
-    background-color: #1d1d1d; /* Very dark background to simulate dungeon atmosphere */
-    color: #cfcfcf; /* Light grayish text for a more eerie vibe */
+    font-family: 'MedievalSharp', cursive; 
+    background-color: #1d1d1d;
+    color: #cfcfcf; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,17 +12,17 @@ body {
     background-image: url('../images/homePage/luc_background.jpg');
     background-size: cover;
     background-position: center;
-    overflow: hidden; /* Prevents scrolling when the pop-up is open */
+    overflow: hidden; 
 }
 
-/* Heading styling for medieval D&D feel */
+
 h1 {
-    font-family: 'Cinzel', serif; /* Ancient and mystical font for the title */
+    font-family: 'Cinzel', serif; 
     font-size: 4rem;
-    color: #e1c16d; /* A warm gold-ish color to give a regal touch */
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Deep shadow effect for mystical feel */
+    color: #e1c16d; 
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); 
     margin-top: 50px;
-    letter-spacing: 2px; /* Spacing for a more ancient feel */
+    letter-spacing: 2px; 
 }
 
 /* Character images container */
@@ -44,21 +44,21 @@ h1 {
     margin: 0 30px;
     padding: 12px;
     border-radius: 12px;
-    background-color: rgba(29, 29, 29, 0.9); /* Darkened background */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Dark shadows */
+    background-color: rgba(29, 29, 29, 0.9); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); 
     border: 3px solid #181616;
     overflow: hidden;
 }
 
 .character-image:hover {
-    border-color: #e1c16d; /* Gold border on hover */
+    border-color: #e1c16d; 
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
 }
 
 /* Character image selected state */
 .character-image.selected {
-    background-color: rgba(255, 140, 0, 0.8); /* Fiery glow for selection */
+    background-color: rgba(255, 140, 0, 0.8); 
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.9);
 }
 
@@ -69,7 +69,7 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.85); /* Dark overlay for the pop-up */
+    background-color: rgba(0, 0, 0, 0.85); 
     display: none;
     align-items: center;
     justify-content: center;
@@ -97,7 +97,7 @@ h1 {
 .popup h2 {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
-    color: #e1c16d; /* Dark Gold for the title */
+    color: #e1c16d;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
 }
@@ -136,7 +136,7 @@ h1 {
 }
 
 .popup-buttons button {
-    background-color: #e1c16d; /* Dark Gold */
+    background-color: #e1c16d; 
     color: #121212;
     border: none;
     padding: 15px 35px;
