@@ -3,8 +3,10 @@
 
 /*-----GENERAL FUNCTIONS-----*/
 /*function for whenever a page loads*/
-window.onload=	fadeout(),/*fades the page out from black*/
-				uk();/*sets the help page language to english*/
+window.onload = function() {
+	fadeout(); // fades the page out from black
+	uk();      // sets the help page language to English
+};
 
 /*function that fades the page out from black*/
 function fadeout(){
