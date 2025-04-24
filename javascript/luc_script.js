@@ -3,10 +3,8 @@
 
 /*-----GENERAL FUNCTIONS-----*/
 /*function for whenever a page loads*/
-window.onload = function() {
-	fadeout(); // fades the page out from black
-	uk();      // sets the help page language to English
-};
+window.onload=	fadeout(),/*fades the page out from black*/
+				uk();/*sets the help page language to english*/
 
 /*function that fades the page out from black*/
 function fadeout(){
@@ -24,8 +22,12 @@ function fadein(){
 function redirect(x){
 	transition.play();/*plays the transition audio*/
 	fadein();/*calls the fade in function*/
-	setTimeout(function(){/*delays the redirect to allow the fade audio and animation play*/
+	setTimeout(function(){
+		if(x === 'back'){
+			window.history.back();/*delays the redirect to allow the fade audio and animation play*/
+		} else { 	
 		window.location.href=x;/*relocates the page to the location given*/
+		}
 	},3000);
 }	
 	
