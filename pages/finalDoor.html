@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--Home page - the intial page the user will see-->
+<!--created by: Luc McNichol-->
+<html>
+
+<head>
+
+	<!--The title of the page-->
+	<title>Final Door</title>
+
+	<!--Links to the style sheet and script file-->
+	<link rel="stylesheet" href="../css/luc_stylesheet.css">
+	<script src="../javascript/luc_script.js" defer></script>
+
+</head>
+
+<body>
+
+	<!--Adds the audio that will be used in this page-->
+	<audio id="transition">
+		<source src="../audio/luc_transition.mp3" type="audio/mp3">
+	</audio>
+	<audio id="background" loop>
+		<source src="../audio/luc_home.mp3" type="audio/mp3">
+	</audio>
+	
+	<!--Main heading-->
+	<h1>
+		<!--Help page button-->
+		<a onclick="redirect('../pages/luc_help_page.html')" class="button"><img src="../images/homePage/luc_help.png" class="button"></a>
+		
+		The end of your journey
+		
+		<!--Jukebox button-->
+		<img src="../images/homePage/luc_mute.png" class="button" id="jukebox" onclick="play()"></a>
+	</h1>
+
+	<!--Main story paragraph-->
+	<p>
+		You have traveled all the way to get to this door. There are strange noises behind it—whispers echoing like forgotten secrets, 
+        the faint scrape of claws against stone, and an eerie, pulsing rhythm that seems to call your name. Your heart pounds in your 
+        chest as the air grows thick with anticipation. Beyond this barrier lies a mystery that could change your fate forever—will you dare to open it? 
+	</p>
+
+	<!--Main image-->
+	<img src="../images/homePage/dungeonDoor.png">
+		
+	<!--Double line break to seperate the content-->	
+	<br><br>
+
+	<!--4 story option buttons-->
+	<nav>
+		<a onclick="redirect('../pages/luc_boss_fight.html')">Open Dungeon Door door</a>
+
+	</nav>
+	
+	<!--Black screen used for fade in/out-->
+	<div id="fade"></div>
+	
+</body>
+
+</html>
