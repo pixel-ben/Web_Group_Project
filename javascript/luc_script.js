@@ -22,12 +22,8 @@ function fadein(){
 function redirect(x){
 	transition.play();/*plays the transition audio*/
 	fadein();/*calls the fade in function*/
-	setTimeout(function(){
-		if(x === 'back'){
-			window.history.back();/*delays the redirect to allow the fade audio and animation play*/
-		} else { 	
+	setTimeout(function(){/*delays the redirect to allow the fade audio and animation play*/
 		window.location.href=x;/*relocates the page to the location given*/
-		}
 	},3000);
 }	
 	
@@ -96,4 +92,4 @@ ruleshead.innerText="规则";
 helphead.innerText="帮助";
 rules.innerHTML="故事的目标是击败吉尔伽美什这只地精。只有通过有效的物品组合才能完成这一目标。<br><br>你只能携带3件物品，每件物品都具有能在最终战斗中帮助你的特性。<br><br>一旦拾取了物品，你就不能丢弃它，除非重新开始冒险。这样做会清空你的物品栏。<br><br>你可以选择任何路径，无论是前进还是后退，直到冒险的尽头，在那里你将开始与boss的战斗。<br><br>每种类型的物品只能携带一个。<br><br>祝你好运！"
 help.innerHTML="通过使用屏幕底部的选项在网站上导航。只需点击文本，您将进一步进入冒险。<br><br>要播放音乐，请点击右上角的音乐图标播放和暂停提供的音乐。<br><br>在任何时候，点击左上角的帮助图标即可返回此帮助页面。<br><br>在冒险结束时，点击重启按钮返回开始。您的物品将被删除。<br><br>在捡起物品之前，您应该阅读物品的属性。<br><br>如果您需要更多帮助，请返回此页面！"
-}
+} 
