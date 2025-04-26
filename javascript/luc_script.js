@@ -59,6 +59,7 @@ function restart(){
 	fade.style.backgroundImage="url('../images/homePage/luc_loading.gif')";/*plays a loading gif*/
 	fade.style.backgroundSize="cover";/*covers the full screen with the gif*/
 	background.play()/*plays the loading music*/
+	localStorage.setItem("chosenWeapon", selectedWeapon);
 	setTimeout(function(){/*delays the redirect to allow the fade audio and animation play*/
 		window.location.href="../index.html"/*redirects to the home page*/
 	},8000);
