@@ -26,8 +26,8 @@ function redirect(x){
 	fadein();/*calls the fade in function*/
 	setTimeout(function(){/*delays the redirect to allow the fade audio and animation play*/
 		window.location.href=x;/*relocates the page to the location given*/
-		window.location.reload();/*reloads the window to ensaure fadeout() happens*/
-	},3000);
+		setTimeout(window.location.reload()),1000);/*reloads the window to ensaure fadeout() happens*/
+	},2000);
 }	
 	
 /*function for whenever the jukebox is clicked*/
