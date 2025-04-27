@@ -8,10 +8,6 @@ window.onload = function(){
     uk();      // sets language to English
 };
 
-/*reloads the window to ensure onload is used*/
-function reload(){
-	window.location.reload();/*reloads the window*/
-}
 /*function that fades the page out from black*/
 function fadeout(){
 	setTimeout(function(){/*short delay as page was loading and the animation wasnt playing*/
@@ -30,6 +26,7 @@ function redirect(x){
 	fadein();/*calls the fade in function*/
 	setTimeout(function(){/*delays the redirect to allow the fade audio and animation play*/
 		window.location.href=x;/*relocates the page to the location given*/
+		window.location.reload();/*reloads the window to ensaure fadeout() happens*/
 	},3000);
 }	
 	
