@@ -10,7 +10,7 @@ window.onload = function(){
 
 /*reloads the window to ensure onload is used*/
 function reload(){
-window.location.reload();/*reloads the window*/
+	window.location.reload();/*reloads the window*/
 }
 /*function that fades the page out from black*/
 function fadeout(){
