@@ -36,7 +36,7 @@ function confirmChoice() {
     if (selectedWeapon) {
         localStorage.setItem("chosenWeapon", selectedWeapon); // Save weapon in localStorage
         alert(`You chose ${selectedWeapon}! Moving to the next step.`);
-        window.location.href = "pickGear.html"; // Redirect to next page
+        window.location.href = "pickArmor.html"; // Redirect to next page
     } else {
         alert("Please select a weapon before continuing!");
     }
