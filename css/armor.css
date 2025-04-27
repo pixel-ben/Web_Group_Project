@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("../images/armorPage/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: px;
+  }
+  
+  h1 {
+    font-family: 'Papyrus';
+    font-size: 4em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  .armor-button-iron {
+    background-color: rgba(0, 0, 0, 0.671);
+    font-family: 'Papyrus';
+    color: white;
+    border: none;
+    height: 225px;
+    width: 225px;
+    padding: 15px 30px;
+    margin: 0px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+  }
+
+ .armor-button-leather {
+    background-color: rgba(0, 0, 0, 0.671);
+    font-family: 'Papyrus';
+    color: white;
+    border: none;
+    height: 225px;
+    width: 225px;
+    padding: 15px 30px;
+    margin: 200px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+  }
+
+  .armor-button-chainmail {
+    background-color: rgba(0, 0, 0, 0.671);
+    font-family: 'Papyrus';
+    color: white;
+    border: none;
+    height: 225px;
+    width: 225px;
+    padding: 15px 30px;
+    margin: 0px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-content: center;
+    box-shadow: 0 0 10px black;
+  }
+  
+  .armor-button-iron img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+    }
+
+  .armor-button-leather img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+    }
+      
+.armor-button-chainmail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  padding: 0;
+  }
+    
+button[class^="armor-button"]:hover {
+  box-shadow: 0 0 50px 5px rgba(54, 48, 116, 0.8); 
+  transition: all 0.3s;
+}
+
+
+
+  
+#armor-description {
+  font-family: 'Papyrus';
+  position: fixed;
+  bottom: 100px;
+  left: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  color: white;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+  min-width: 1100px;
+  max-width: 1100px;
+  min-height: 100px;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  #popup-overlay {
+    font-family: 'Papyrus';
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #popup-box {
+    font-family: 'Papyrus';
+    background-color: #222;
+    padding: 30px 50px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    min-width: 200px;
+    min-height: 75px;
+  }
+  
