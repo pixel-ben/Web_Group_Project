@@ -41,15 +41,15 @@ function play(){
 /*function that calculates a win or loss*/
 function winlose(){
 	sword.play()/*plays the sword sound, letting the user know a fight has been engaged*/
-	var random=Math.floor(Math.random()*2);/*calculates the score of the user*/
+	const selectedWeapon = localStorage.getItem("chosenWeapon");/*gets the item from local storage*/
 	boss.src="../images/homePage/luc_fight.gif";/*plays the boss fight gif*/
-	setTimeout(function() {/*delays the redirect to allow the fade audio and animation play*/
-		if (random===0) {/*does the following if the user wins*/
-			redirect('../pages/luc_win_page.html');/*redirects to the win page*/
-		} else {/*does the following if the user loses*/
-			redirect('../pages/luc_loss_page.html');/*redirects to the win page*/
-    }
-	}, 3000);
+	setTimeout(function () {/**/
+        if (selectedWeapon === "Sword" || selectedWeapon === "Dagger"){/*if the correct weapon is chosen*/
+            redirect('../pages/luc_win_page.html');/*redirect to the win page*/
+        }else{/*if the wrong weapon is chosen*/
+            redirect('../pages/luc_loss_page.html');/*redirect to the loss page*/
+        }
+    	}, 3000);/*allows enough time for the gif to play*/
 }
 
 /*function that allows a game restart*/
@@ -59,7 +59,7 @@ function restart(){
 	fade.style.backgroundImage="url('../images/homePage/luc_loading.gif')";/*plays a loading gif*/
 	fade.style.backgroundSize="cover";/*covers the full screen with the gif*/
 	background.play()/*plays the loading music*/
-	localStorage.setItem("chosenWeapon", selectedWeapon);
+	localStorage.setItem("chosenWeapon","");/*sets the weapon back to none*/
 	setTimeout(function(){/*delays the redirect to allow the fade audio and animation play*/
 		window.location.href="../index.html"/*redirects to the home page*/
 	},8000);
