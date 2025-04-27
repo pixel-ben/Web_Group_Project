@@ -46,7 +46,7 @@ function winlose(){
 	const selectedWeapon = localStorage.getItem("chosenWeapon");/*gets the item from local storage*/
 	boss.src="../images/homePage/luc_fight.gif";/*plays the boss fight gif*/
 	setTimeout(function () {/**/
-        if (selectedWeapon === "Sword" || selectedWeapon === "Dagger"){/*if the correct weapon is chosen*/
+        if (selectedWeapon === "Sword" || selectedWeapon === "dagger"){/*if the correct weapon is chosen*/
             redirect('../pages/luc_win_page.html');/*redirect to the win page*/
         }else{/*if the wrong weapon is chosen*/
             redirect('../pages/luc_loss_page.html');/*redirect to the loss page*/
