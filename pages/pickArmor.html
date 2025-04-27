@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pick Your Armor</title>
+    <link rel="stylesheet" href="../css/armor.css" />
+  </head>
+
+  <body>
+    <h1>Pick Your Armor Type:</h1>
+
+    <!-- Armor buttons with images -->
+    <button class="armor-button-iron">
+      Steel
+      <img src="../images/armorPage/iron.jpg" alt="Iron Armor" />
+    </button>
+
+    <button class="armor-button-leather">
+      Leather
+      <img src="../images/armorPage/leather.jpg" alt="Leather Armor" />
+    </button>
+
+    <button class="armor-button-chainmail">
+      Chainmail
+      <img src="../images/armorPage/chainmail.jpg" alt="Chainmail Armor" />
+    </button>
+
+    <!-- Description box when hovering over buttons.-->
+    <div id="armor-description" style="margin-bottom: 50px; font-size: 2em">
+      Hover over an armor to see its description, and click to confirm
+      selection!
+    </div>
+
+    <!-- Choice confirmation popup -->
+    <div id="popup-overlay" class="hidden">
+      <div id="popup-box">
+        <h2>Confirm Selection?</h2>
+        <button id="proceed-button">Proceed</button>
+        <button id="cancel-button">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Javascript for description box and confirmation pop-up-->
+    <script>
+      //Calling description box
+      const descriptionBox = document.getElementById("armor-description");
+
+      //Armor descriptions
+      const descriptions = {
+        "armor-button-iron":
+          "Steel Armor - Strong but heavy, very good for taking heavy hits but will slow you down a lot.",
+        "armor-button-leather":
+          "Leather Armor - Very light and great for movement, however it offers little protection against big hits.",
+        "armor-button-chainmail":
+          "Chainmail Armor - A great balance between protection and agility, jack of all trades, master of none.",
+      };
+
+      // Select all armor buttons
+      const armorButtons = document.querySelectorAll(
+        "button[class^='armor-button']"
+      );
+
+      // Update description box when hovering over buttons
+      armorButtons.forEach((button) => {
+        button.addEventListener("mouseover", () => {
+          const className = button.className;
+          descriptionBox.textContent =
+            descriptions[className] ||
+            "Hover over an armor to see its description!";
+        });
+
+        // Back to default when mouse leaves button
+        button.addEventListener("mouseout", () => {
+          descriptionBox.textContent =
+            "Hover over an armor to see its description!";
+        });
+
+        // Confirmation pop up when button clicked
+        button.addEventListener("click", () => {
+          document.getElementById("popup-overlay").classList.remove("hidden");
+        });
+      });
+
+      // Close pop-up whhen cancel is clicked
+      document.getElementById("cancel-button").addEventListener("click", () => {
+        document.getElementById("popup-overlay").classList.add("hidden");
+      });
+
+      // Continue with selection and alert user, and proceed to the next page
+      document
+        .getElementById("proceed-button")
+        .addEventListener("click", () => {
+          alert("Armor selected.");
+          document.getElementById("popup-overlay").classList.add("hidden");
+          window.location.href = "pickGear.html";
+        });
+    </script>
+  </body>
+</html>
